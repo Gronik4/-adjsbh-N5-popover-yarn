@@ -1,0 +1,28 @@
+{
+    "env": {
+        "es6": true,
+        "browser": true,
+        "jest": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 13,
+        "sourceType": "module"
+    },
+    "rules": {
+        "linebreak-style": ["error", "windows"], //Перенос строк. Удалить перд push!!!!!!!
+        "no-restricted-syntax": [
+            "error",
+            "LabeledStatement",
+            "WithStatement"
+          ],
+          "import/no-extraneous-dependencies": [
+            "error",
+            {
+              "devDependencies": true
+            }
+          ]
+    }
+}

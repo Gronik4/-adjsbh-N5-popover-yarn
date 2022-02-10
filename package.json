@@ -1,0 +1,45 @@
+{
+  "name": "-adjsbh-n5-popover-yarn",
+  "version": "1.0.0",
+  "description": "ДЗ №5 Работа с формами Popover",
+  "main": "index.js",
+  "repository": "https://github.com/Gronik4/-adjsbh-N5-popover-yarn.git",
+  "author": "Gronik4 <golegni@yandex.ru>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "doc": "jsdoc -c jsdoc.conf.json",
+    "preshow:coverage": "yarn run coverage",
+    "show:coverage": "live-server coverage/lcov-report",
+    "preshow:doc": "yarn run doc",
+    "show:doc": "live-server doc",
+    "preshow:dist": "yarn run build",
+    "show:dist": "live-server dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "babel": "^6.23.0",
+    "babel-jest": "^27.4.6",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.7",
+    "mini-css-extract-plugin": "^2.5.3",
+    "svg-inline-loader": "^0.8.2",
+    "terser-webpack-plugin": "^5.3.0",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "core-js": "^3.20.3"
+  }
+}
