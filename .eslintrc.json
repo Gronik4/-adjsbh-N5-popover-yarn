@@ -1,8 +1,12 @@
 {
     "env": {
-        "es6": true,
-        "browser": true,
-        "jest": true
+      "test": {
+        "presets": [[
+          "@babel/preset-env",{
+            "targets": {"node": "current"}
+            }
+         ]]
+      }
     },
     "extends": [
         "airbnb-base"
@@ -13,6 +17,7 @@
     },
     "rules": {
         "linebreak-style": ["error", "windows"], //Перенос строк. Удалить перд push!!!!!!!
+        "no-unused-vars": "off",
         "no-restricted-syntax": [
             "error",
             "LabeledStatement",
