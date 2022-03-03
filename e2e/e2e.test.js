@@ -20,7 +20,7 @@ describe('test Popap form', () =>{
     });
 
     browser = await puppeteer.launch({
-      headless: false, // show
+      //headless: false, // show
       // slowMo: 100,
       // devtools: true, // show devTools
     });
@@ -31,7 +31,14 @@ describe('test Popap form', () =>{
     await page.goto(baseUrl);
     const buttAdd = await page.$('[id = bn]');
     await buttAdd.click();
-    page.waitForSelector('[class = head]');
+    page.waitForSelector('.popup');
+  });
+
+  test('Test hidden popup', async () => {
+    await page.goto(baseUrl);
+    const buttAdd = await page.$('[id = bn]');
+    await buttAdd.click();
+    page.waitForSelector('.popup', {hidden: true});
   })
 
   afterAll(async () => {
