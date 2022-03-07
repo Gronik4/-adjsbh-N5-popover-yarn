@@ -32,14 +32,9 @@ describe('test Popap form', () =>{
     const buttAdd = await page.$('[id = bn]');
     await buttAdd.click();
     page.waitForSelector('.popup');
-  });
-
-  test('Test hidden popup', async () => {
-    await page.goto(baseUrl);
-    const buttAdd = await page.$('[id = bn]');
     await buttAdd.click();
     page.waitForSelector('.popup', {hidden: true});
-  })
+  });
 
   afterAll(async () => {
     await browser.close();
