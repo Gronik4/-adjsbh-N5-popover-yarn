@@ -1,6 +1,7 @@
 document.querySelector('.btn').addEventListener('click', (e) => {
   const button = e.target;
   const topGap = 12;
+  // const {header, content} = button.dataset; - Не работает.....
   if (document.querySelector('.popup')) {
     document.querySelector('.popup').remove();
   } else {
