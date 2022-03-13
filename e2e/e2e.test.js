@@ -29,7 +29,7 @@ describe('test Popap form', () =>{
 
   test('Test show popup', async () => {
     await page.goto(baseUrl);
-    const buttAdd = await page.$('[id = bn]');
+    const buttAdd = await page.$('.btn');
     await buttAdd.click();
     page.waitForSelector('.popup');
     await buttAdd.click();

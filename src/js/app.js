@@ -1,13 +1,9 @@
-document.getElementById('bn').addEventListener('click', (e) => {
-  e.preventDefault();
+document.querySelector('.btn').addEventListener('click', (e) => {
+  const button = e.target;
+  const topGap = 12;
   if (document.querySelector('.popup')) {
-    const show = document.querySelector('.popup');
-    if (!show.hasAttribute('hidden')) {
-      show.setAttribute('hidden', 'hidden');
-    } else {show.removeAttribute('hidden');}
+    document.querySelector('.popup').remove();
   } else {
-    const button = document.getElementById('bn');
-
     const head = document.createElement('div');
     head.className = 'head';
     const h4 = document.createElement('h4');
@@ -20,13 +16,13 @@ document.getElementById('bn').addEventListener('click', (e) => {
     p.textContent = `${button.dataset.text}`;
     text.appendChild(p);
 
-    const message = document.createElement('div');
-    message.className = 'popup';
-    message.style.top = `${button.offsetTop - 132}px`;
-    message.style.left = `${button.offsetLeft}px`;
-    message.appendChild(head);
-    message.appendChild(text);
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.appendChild(head);
+    popup.appendChild(text);
     const contain = document.querySelector('.container');
-    contain.appendChild(message);
-  } 
+    contain.appendChild(popup);
+    popup.style.left = `${button.offsetLeft + button.offsetWidth / 2 - popup.offsetWidth / 2}px`;
+    popup.style.top = `${button.offsetTop - popup.offsetHeight - topGap}px`;
+  }
 });
