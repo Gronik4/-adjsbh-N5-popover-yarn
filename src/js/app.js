@@ -1,7 +1,13 @@
 document.querySelector('.btn').addEventListener('click', (e) => {
   const button = e.target;
   const topGap = 12;
-  // const {header, content} = button.dataset; - Не работает.....
+  /**
+   * const {header, content} = button.dataset; - Не работает.....
+   * Да потому, что в данном случае должно быть const {head, text} = button.dataset;. Это потому, что в index.html 
+   * data-head="это какой-то заголовок" и 
+   * data-text="получишь результат и какой-то поясняющий текст"
+   * Но сразу так сделать нельзя - будет переименование переменныч head и text
+   */
   if (document.querySelector('.popup')) {
     document.querySelector('.popup').remove();
   } else {
