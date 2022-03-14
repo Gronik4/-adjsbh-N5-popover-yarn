@@ -6,7 +6,7 @@ document.querySelector('.btn').addEventListener('click', (e) => {
    * Да потому, что в данном случае должно быть const {head, text} = button.dataset;. Это потому, что в index.html 
    * data-head="это какой-то заголовок" и 
    * data-text="получишь результат и какой-то поясняющий текст"
-   * Но сразу так сделать нельзя - будет переименование переменныч head и text
+   * Но сразу так делать не стал - нужно переименовывать переменные head и text далее по проге, пересобирать и на AppVeyor тоже....
    */
   if (document.querySelector('.popup')) {
     document.querySelector('.popup').remove();
